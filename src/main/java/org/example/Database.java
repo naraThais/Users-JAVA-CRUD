@@ -3,7 +3,7 @@ package org.example;
 import java.sql.*;
 
 public class Database {
-    private static final String URL = "jdbc:sqlite:users.db"; // Caminho para o banco de dados SQLite
+    private static final String URL = "jdbc:sqlite:users.db";
 
     // Método para conectar ao banco de dados
     public static Connection connect() throws SQLException {

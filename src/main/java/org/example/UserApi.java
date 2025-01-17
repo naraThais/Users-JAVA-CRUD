@@ -5,7 +5,6 @@ import static spark.Spark.*;
 public class UserApi {
 
     public static void main(String[] args) {
-        // Configurar o servidor Spark para rodar na porta 8080
         port(8080);
 
         // Criar a tabela de usuários no banco (caso ainda não exista)
@@ -19,10 +18,8 @@ public class UserApi {
         // Endpoint GET para retornar um usuário específico por ID
         get("/users/:id", (req, res) -> {
             int id = Integer.parseInt(req.params(":id"));
-            // Lógica para buscar o usuário pelo ID (exemplo simples)
             String users = Database.getUsers();
-            // Aqui você pode melhorar para buscar o usuário específico
-            return users; // Apenas retornando todos por enquanto
+            return users;
         });
 
         // Endpoint POST para criar um novo usuário
